@@ -15,10 +15,13 @@ export const tasksSlice = createSlice({
         },
          deleteTask: (state,action) => {
             return state.filter((task) => task.id !== action.payload.id);
-         }
+         },
+        countTasks: (state,action) => {
+            return state.length;
+        }
      }
 })
 
-export const {addTask, deleteTask} = tasksSlice.actions;
+export const {addTask, deleteTask, countTasks} = tasksSlice.actions;
 
 export default tasksSlice.reducer;
