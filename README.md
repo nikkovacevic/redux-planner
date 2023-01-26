@@ -2,6 +2,11 @@
 
 This is a simple task management app built using React. It allows users to view, save and delete tasks. The task data model contains an uuid, name of the task, the description, theme color and a priority level. The state of tasks is being managed by redux and redux-toolkit libraries.
 
+## Purpose
+
+The purpose of this project is to learn and experiment with React Redux, Redux Toolkit and ChakraUI library for styled components.
+
+
 ## Getting started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
@@ -28,9 +33,9 @@ These instructions will get you a copy of the project up and running on your loc
 ## Built With
 
 - [React](https://reactjs.org/) - A JavaScript library for building user interfaces
-- [React Router](https://reactrouter.com/) - A library for routing in React
 - [React Redux](https://redux.js.org/) - Predictable state container for JavaScript apps
 - [Redux Toolkit](https://redux-toolkit.js.org/) - The official toolset for efficient Redux development
+- [Chakra UI](https://chakra-ui.com/) - Simple, modular and accessible component library
 - [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
 
 ## Author
