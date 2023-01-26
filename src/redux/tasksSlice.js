@@ -8,7 +8,9 @@ export const tasksSlice = createSlice({
             const newTask = {
                 id: new Date(),
                 name: action.payload.taskName,
+                description: action.payload.description,
                 color: action.payload.color,
+                priority: action.payload.priority,
                 completed: action.payload.completed
             }
             state.push(newTask)

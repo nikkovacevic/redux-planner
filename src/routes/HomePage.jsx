@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Box, Flex, Image, Text, IconButton, Show, Tooltip, Button } from '@chakra-ui/react';
 import { FaPlus } from 'react-icons/fa';
 
 import {useSelector, useDispatch} from 'react-redux';
+import AddNewModal from '../components/AddNewModal.jsx';
 
 function HomePage() {
+
+    const [openModal, setOpenModal] = useState(false);
 
     const  tasks = useSelector((state) => {return state.tasks})
     const dispatch = useDispatch();
 
     return (
+        <>
         <Box bg={'#171717'} p={8} h='90vh' color='white'>
 
             {/* Toolbar */}
@@ -27,10 +31,11 @@ function HomePage() {
                         bottom={'5vh'}
                         right={'5vh'}
                         zIndex={100}
+                        onClick={()=> setOpenModal(true)}
                     />
                 </Show>
                 <Show above={'sm'}>
-                    <Button onClick={()=> console.log(tasks.length)} colorScheme='messenger'>Add new</Button>
+                    <Button onClick={()=> setOpenModal(true)} colorScheme='messenger'>Add new</Button>
                 </Show>
             </Flex>
 
@@ -38,7 +43,10 @@ function HomePage() {
             {/*card za vsakega tak ko je v bookmarku*/}
             {/*badge komponenta*/}
 
+
         </Box>
+            <AddNewModal open={openModal} handleClose={() => setOpenModal(false)}/>
+        </>
     );
 }
 
