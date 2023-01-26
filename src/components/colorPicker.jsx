@@ -38,6 +38,7 @@ function ColorPicker({ handleColorSelect }) {
                     <SimpleGrid columns={5} spacing={2}>
                         {colors.map((color) => (
                             <Button
+                                key={color}
                                 background={color}
                                 height={'24px'}
                                 width={'24px'}

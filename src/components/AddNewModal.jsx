@@ -10,15 +10,22 @@ import {
 } from '@chakra-ui/react';
 import ColorPicker from './colorPicker.jsx';
 
-function AddNewModal({ open, handleClose }) {
+function AddNewModal({ open, handleClose, handleSave }) {
 
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
-    const [color, setColor] = useState('');
-    const [priority, setPriority] = useState('');
+    const [color, setColor] = useState('red.400');
+    const [priority, setPriority] = useState('low');
 
     const handleColorSelect = (color) => {
         setColor(color)
+    }
+
+    const resetForm = () => {
+        setName('');
+        setDescription('');
+        setColor('red.400');
+        setPriority('low');
     }
 
     return (
@@ -39,17 +46,17 @@ function AddNewModal({ open, handleClose }) {
                         <Textarea value={description} onChange={(e) => setDescription(e.target.value)}/>
                     </FormControl>
 
-                    <Flex justifyContent={'space-between'}>
+                    <Flex justify={'space-between'}>
                         <FormControl width={'20%'}>
                             <FormLabel>Color</FormLabel>
                             <ColorPicker handleColorSelect={handleColorSelect}/>
                         </FormControl>
                         <FormControl width={'80%'}>
                             <FormLabel>Priority</FormLabel>
-                            <Select>
-                                <option value='Low' style={{ backgroundColor: '#292929', color:"white"}}>Low</option>
-                                <option value='Medium' style={{ backgroundColor: '#292929', color:"white"}}>Medium</option>
-                                <option value='High' style={{ backgroundColor: '#292929', color:"white"}}>High</option>
+                            <Select onChange={(e) => setPriority(e.target.value)}>
+                                <option value='low' style={{ backgroundColor: '#292929', color:"white"}}>Low</option>
+                                <option value='medium' style={{ backgroundColor: '#292929', color:"white"}}>Medium</option>
+                                <option value='high' style={{ backgroundColor: '#292929', color:"white"}}>High</option>
                             </Select>
                         </FormControl>
 
@@ -57,8 +64,21 @@ function AddNewModal({ open, handleClose }) {
 
                 </ModalBody>
                 <ModalFooter>
-                    <Button colorScheme={'messenger'} mr={2}>Save</Button>
-                    <Button colorScheme={'#292929'} variant={'outline'} onClick={handleClose}>Cancel</Button>
+                    <Button colorScheme={'messenger'} mr={2} onClick={() => {
+                        handleSave({
+                            name,
+                            description,
+                            color,
+                            priority
+                        });
+                        resetForm();
+                        handleClose();
+                    }}>Save</Button>
+                    <Button colorScheme={'#292929'} variant={'outline'} onClick={() => {
+                        resetForm();
+                        handleClose();
+                    }
+                    }>Cancel</Button>
                 </ModalFooter>
             </ModalContent>
 
