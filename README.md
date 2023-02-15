@@ -11,6 +11,14 @@ The state of tasks and events is being managed by Redux and Redux Toolkit librar
 
 The purpose of this project is to learn and experiment with React Redux, Redux Toolkit and ChakraUI library for styled components.
 
+## Screenshots
+
+<p float="middle">
+    <img src='screenshots/webhome.PNG' width="100%" alt='home page on web'/>
+</p>
+
+
+
 
 ## Getting started
 
