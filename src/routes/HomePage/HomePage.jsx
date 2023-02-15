@@ -1,8 +1,20 @@
 import React from 'react';
+import { Box, Show } from '@chakra-ui/react';
+import MediumView from './MediumView.jsx';
+import SmallView from './SmallView.jsx';
 
-function HomePage(props) {
+function HomePage() {
     return (
-        <div>HomePage</div>
+        <Box bg={'#171717'} px={16} pt={24} h='90vh' color='white'>
+            <Show above={'md'}>
+                <MediumView />
+            </Show>
+            <Show below={'md'}>
+                <SmallView />
+            </Show>
+
+
+        </Box>
     );
 }
 
