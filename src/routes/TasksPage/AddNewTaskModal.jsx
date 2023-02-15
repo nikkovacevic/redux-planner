@@ -9,6 +9,7 @@ import {
     ModalCloseButton, Input, FormControl, FormLabel, Textarea, Button, Select, Flex
 } from '@chakra-ui/react';
 import ColorPicker from '../../components/colorPicker.jsx';
+import { BUTTON_COLOR, HOVER_COLOR } from '../../assets/constants.js';
 
 function AddNewTaskModal({ open, handleClose, handleSave }) {
 
@@ -64,7 +65,11 @@ function AddNewTaskModal({ open, handleClose, handleSave }) {
 
                 </ModalBody>
                 <ModalFooter>
-                    <Button colorScheme={'messenger'} mr={2} onClick={() => {
+                    <Button
+                        bg={BUTTON_COLOR}
+                        _hover={{ bg: HOVER_COLOR}}
+                        mr={2}
+                        onClick={() => {
                         handleSave({
                             name,
                             description,

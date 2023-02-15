@@ -3,16 +3,21 @@ import {
     Button,
     Flex,
     FormControl,
-    FormLabel, Input, Modal,
+    FormLabel,
+    Input,
+    Modal,
     ModalBody,
     ModalCloseButton,
-    ModalContent, ModalFooter,
+    ModalContent,
+    ModalFooter,
     ModalHeader,
-    ModalOverlay, Select, Textarea
+    ModalOverlay,
+    Textarea
 } from '@chakra-ui/react';
 import ColorPicker from '../../components/colorPicker.jsx';
+import { BUTTON_COLOR, HOVER_COLOR } from '../../assets/constants.js';
 
-function AddNewEventModal({open, handleClose, handleSave}) {
+function AddNewEventModal({ open, handleClose, handleSave }) {
 
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
@@ -20,19 +25,19 @@ function AddNewEventModal({open, handleClose, handleSave}) {
     const [date, setDate] = useState('');
 
     const handleColorSelect = (color) => {
-        setColor(color)
-    }
+        setColor(color);
+    };
 
     const resetForm = () => {
         setName('');
         setDescription('');
         setColor('red.400');
         setDate('');
-    }
+    };
 
     return (
         <Modal isOpen={open} onClose={handleClose} width={'90%'}>
-            <ModalOverlay />
+            <ModalOverlay/>
             <ModalContent bg={'#292929'} color={'white'}>
                 <ModalHeader>
                     Add new event
@@ -57,17 +62,20 @@ function AddNewEventModal({open, handleClose, handleSave}) {
                             <FormLabel>Date</FormLabel>
                             <Input value={date} onChange={(e) => setDate(e.target.value)} type='datetime-local'
                                    css={`
-                        ::-webkit-calendar-picker-indicator {
-                            display: none;
-                        }
-                    `}/>
+                                     ::-webkit-calendar-picker-indicator {
+                                       display: none;
+                                     }
+                                   `}/>
                         </FormControl>
 
                     </Flex>
 
                 </ModalBody>
                 <ModalFooter>
-                    <Button colorScheme={'messenger'} mr={2} onClick={() => {
+                    <Button
+                        bg={BUTTON_COLOR}
+                        _hover={{ bg: HOVER_COLOR }}
+                        mr={2} onClick={() => {
                         handleSave({
                             name,
                             description,

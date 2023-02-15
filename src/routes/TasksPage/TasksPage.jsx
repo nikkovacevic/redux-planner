@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Box, Flex, Image, Text, IconButton, Show, Tooltip, Button, SimpleGrid } from '@chakra-ui/react';
+import { Box, Flex, Text, IconButton, Show, Button, SimpleGrid } from '@chakra-ui/react';
 import { FaPlus } from 'react-icons/fa';
 
 import {useSelector, useDispatch} from 'react-redux';
 import AddNewTaskModal from './AddNewTaskModal.jsx';
 import { addTask, deleteTask } from '../../redux/tasksSlice.js';
 import TaskItem from './TaskItem.jsx';
+import { BUTTON_COLOR, HOVER_COLOR } from '../../assets/constants.js';
 
 function TasksPage() {
 
@@ -44,7 +45,9 @@ function TasksPage() {
                 </Flex>
                 <Show below={'sm'}>
                     <IconButton
-                        colorScheme={'messenger'}
+                        aria-label={'add-button'}
+                        bg={BUTTON_COLOR}
+                        _hover={{ bg: HOVER_COLOR}}
                         icon={<FaPlus/>}
                         size={'lg'}
                         pos={'absolute'}
@@ -57,7 +60,8 @@ function TasksPage() {
                 <Show above={'sm'}>
                     <Button
                         onClick={()=> setOpenModal(true)}
-                        colorScheme='messenger'
+                        bg={BUTTON_COLOR}
+                        _hover={{ bg: HOVER_COLOR}}
                     >
                         Add new
                     </Button>

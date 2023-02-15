@@ -6,6 +6,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import { addEvent, deleteEvent } from '../../redux/eventsSlice';
 import EventItem from './EventItem.jsx';
 import AddNewEventModal from './AddNewEventModal.jsx';
+import { BUTTON_COLOR, HOVER_COLOR } from '../../assets/constants.js';
 
 function EventsPage() {
 
@@ -44,7 +45,10 @@ function EventsPage() {
                     </Flex>
                     <Show below={'sm'}>
                         <IconButton
-                            colorScheme={'messenger'}
+                            aria-label={'add-button'}
+                            bg={BUTTON_COLOR}
+                            _hover={{ bg: HOVER_COLOR}}
+                            _active={{ outline: '0px'}}
                             icon={<FaPlus/>}
                             size={'lg'}
                             pos={'absolute'}
@@ -57,7 +61,8 @@ function EventsPage() {
                     <Show above={'sm'}>
                         <Button
                             onClick={()=> setOpenModal(true)}
-                            colorScheme='messenger'
+                            bg={BUTTON_COLOR}
+                            _hover={{ bg: HOVER_COLOR}}
                         >
                             Add new
                         </Button>
