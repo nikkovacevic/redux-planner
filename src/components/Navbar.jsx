@@ -27,16 +27,22 @@ function Navbar() {
                 <Show above={'sm'}>
                     <Flex w='30%' justify={'space-evenly'}>
                         <Link to='/tasks'>
-                            <Text position='relative'>
-                                Tasks
+                            <Box position='relative'>
+                                <Text>
+                                    Tasks
+                                </Text>
                                 <NumberBadge number={tasks.length}/>
-                            </Text>
+                            </Box>
+
                         </Link>
                         <Link to='/events'>
-                            <Text position='relative'>
-                                Events
+                            <Box position='relative'>
+                                <Text>
+                                    Events
+                                </Text>
                                 <NumberBadge number={events.length} />
-                            </Text>
+                            </Box>
+
                         </Link>
                     </Flex>
 
