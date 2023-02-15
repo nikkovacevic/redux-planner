@@ -11,7 +11,7 @@ The state of tasks and events is being managed by Redux and Redux Toolkit librar
     <img src='screenshots/webhome.PNG' width="100%" alt='home page on web'/>
 </p>
 
-More screenshots are available in the [screenshots](https://github.com/nikkovacevic/redux-task-management/tree/main/screenshots) folder.
+More screenshots are available in the [screenshots](https://github.com/nikkovacevic/redux-task-management/blob/main/screenshots/README.md) folder.
 
 ## Purpose
 
