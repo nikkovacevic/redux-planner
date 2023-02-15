@@ -36,18 +36,13 @@ These instructions will get you a copy of the project up and running on your loc
 - [React Redux](https://redux.js.org/) - Predictable state container for JavaScript apps
 - [Redux Toolkit](https://redux-toolkit.js.org/) - The official toolset for efficient Redux development
 - [Chakra UI](https://chakra-ui.com/) - Simple, modular and accessible component library
+- [dayjs](https://day.js.org/) - JavaScript date utility library
 - [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
 
 ## Author
 
 - **Nik Kovačević** - [Github](https://github.com/nikkovacevic)
 
-## To do...
-
-- remove router
-- update feature
-- lightmode support
-- screenshots
 
 ## Useful links
 
