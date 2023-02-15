@@ -10,8 +10,7 @@ function HomePageButton({ text, to }) {
                 width={'fit-content'}
                 height={'fit-content'}
                 px={6} py={3}
-                mt={8} mr={4}
-                // colorScheme='messenger'
+                mt={8}
                 bg={BUTTON_COLOR}
                 _hover={{ bg: HOVER_COLOR}}
                 _active={{ border: '0px'}}

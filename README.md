@@ -1,6 +1,11 @@
-# Redux Task Management
+# Redux Planner
 
-This is a simple task management app built using React. It allows users to view, save and delete tasks. The task data model contains an uuid, name of the task, the description, theme color and a priority level. The state of tasks is being managed by redux and redux-toolkit libraries.
+This is a simple planner app built using React.
+It allows users to view, save and delete tasks and events.
+The task data model contains an uuid, name of the task,
+the description, theme color and a priority level, while
+the event data model contains an uuid, name of the event, the description, theme color and a date.
+The state of tasks and events is being managed by Redux and Redux Toolkit libraries.
 
 ## Purpose
 

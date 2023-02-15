@@ -5,7 +5,7 @@ import HomePageButton from './HomePageButton.jsx';
 
 function MediumView() {
     return (
-        <Flex justify='space-evenly' align='center'>
+        <Flex justify='space-evenly' align='center' px={16}>
             <Flex direction='column' w='40%' mr='10%'>
             {/*    text */}
                 <Text fontSize={28}>Experimenting with Redux</Text>
@@ -14,6 +14,7 @@ function MediumView() {
                     fontWeight={'bold'}
                     letterSpacing={4}
                     mb={8}
+                    noOfLines={2}
                 >
                     Redux Planner
                 </Text>
@@ -24,7 +25,7 @@ function MediumView() {
                     The purpose of this project is to learn and experiment with React Redux,
                     Redux Toolkit and ChakraUI library for styled components.
                 </Text>
-                <Flex>
+                <Flex justify='flex-start' gap={4}>
                     <HomePageButton text={'Go to tasks'} to={'/tasks'}/>
                     <HomePageButton text={'Go to events'} to={'/events'}/>
                 </Flex>

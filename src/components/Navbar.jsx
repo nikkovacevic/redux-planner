@@ -17,14 +17,14 @@ function Navbar() {
                 <Link to='/'>
                     <Flex align={'center'}>
                         <Image src={redux} boxSize='4vh' mr={4}/>
-                        <Text letterSpacing={1} fontSize={32}>
-                            <Show above={'sm'}>Redux Task Manager</Show>
-                            <Show below={'sm'}>Task Manager</Show>
+                        <Text letterSpacing={1} fontSize={32} noOfLines={1}>
+                            <Show above={'sm'}>Redux Planner</Show>
+                            <Show below={'sm'}>Planner</Show>
                         </Text>
                     </Flex>
                 </Link>
 
-                <Show above={'sm'}>
+                <Show above={'md'}>
                     <Flex w='30%' justify={'space-evenly'}>
                         <Link to='/tasks'>
                             <Box position='relative'>

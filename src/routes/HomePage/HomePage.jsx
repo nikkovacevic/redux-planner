@@ -5,7 +5,7 @@ import SmallView from './SmallView.jsx';
 
 function HomePage() {
     return (
-        <Box bg={'#171717'} px={16} pt={24} h='90vh' color='white'>
+        <Box bg={'#171717'} pt={24} h='90vh' color='white'>
             <Show above={'md'}>
                 <MediumView />
             </Show>
