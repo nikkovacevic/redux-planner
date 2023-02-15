@@ -1,7 +1,7 @@
 import React from 'react';
 import { Badge, Box, Flex, IconButton, Text } from '@chakra-ui/react';
 import { AiFillDelete } from 'react-icons/ai';
-import badgeColors from '../assets/badgeColors.js';
+import badgeColors from '../../assets/badgeColors.js';
 function TaskItem({task, handleDelete}) {
     return (
         <Flex bg={'#292929'} p={3} borderRadius={6} justify={'space-between'}>

@@ -8,9 +8,9 @@ import {
     ModalBody,
     ModalCloseButton, Input, FormControl, FormLabel, Textarea, Button, Select, Flex
 } from '@chakra-ui/react';
-import ColorPicker from './colorPicker.jsx';
+import ColorPicker from '../../components/colorPicker.jsx';
 
-function AddNewModal({ open, handleClose, handleSave }) {
+function AddNewTaskModal({ open, handleClose, handleSave }) {
 
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
@@ -29,7 +29,7 @@ function AddNewModal({ open, handleClose, handleSave }) {
     }
 
     return (
-        <Modal isOpen={open} onClose={handleClose}>
+        <Modal isOpen={open} onClose={handleClose} width={'90%'}>
             <ModalOverlay />
             <ModalContent bg={'#292929'} color={'white'}>
                 <ModalHeader>
@@ -87,4 +87,4 @@ function AddNewModal({ open, handleClose, handleSave }) {
     );
 }
 
-export default AddNewModal;
+export default AddNewTaskModal;

@@ -11,7 +11,9 @@ import Navbar from './components/Navbar.jsx';
 import { ChakraProvider } from '@chakra-ui/react'
 import store from './redux/store'
 import { Provider} from 'react-redux';
-import HomePage from './routes/HomePage.jsx';
+import TasksPage from './routes/TasksPage/TasksPage.jsx';
+import HomePage from './routes/HomePage/HomePage.jsx';
+import EventsPage from './routes/EventsPage/EventsPage.jsx';
 
 const AppLayout = () => (
     <>
@@ -27,6 +29,14 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <HomePage/>
+            },
+            {
+                path: '/tasks',
+                element: <TasksPage/>
+            },
+            {
+                path: '/events',
+                element: <EventsPage/>
             }
         ]
     }

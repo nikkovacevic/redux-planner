@@ -3,11 +3,11 @@ import { Box, Flex, Image, Text, IconButton, Show, Tooltip, Button, SimpleGrid }
 import { FaPlus } from 'react-icons/fa';
 
 import {useSelector, useDispatch} from 'react-redux';
-import AddNewModal from '../components/AddNewModal.jsx';
-import { addTask, deleteTask } from '../redux/tasksSlice.js';
-import TaskItem from '../components/TaskItem.jsx';
+import AddNewTaskModal from './AddNewTaskModal.jsx';
+import { addTask, deleteTask } from '../../redux/tasksSlice.js';
+import TaskItem from './TaskItem.jsx';
 
-function HomePage() {
+function TasksPage() {
 
     const [openModal, setOpenModal] = useState(false);
 
@@ -55,9 +55,16 @@ function HomePage() {
                     />
                 </Show>
                 <Show above={'sm'}>
-                    <Button onClick={()=> setOpenModal(true)} colorScheme='messenger'>Add new</Button>
+                    <Button
+                        onClick={()=> setOpenModal(true)}
+                        colorScheme='messenger'
+                    >
+                        Add new
+                    </Button>
                 </Show>
             </Flex>
+
+            {/* Task List */}
             <SimpleGrid columns={{sm: 1, md: 2, lg: 3}} spacing={8}>
                 {tasks?.map((task) => (
                     <TaskItem key={task.id} task={task} handleDelete={(id) => handleDeleteTask(id)}/>
@@ -65,13 +72,13 @@ function HomePage() {
             </SimpleGrid>
 
 
-
-        </Box>
-            <AddNewModal open={openModal} handleClose={() => setOpenModal(false)}
-                handleSave={(data) => handleSubmit(data)}
+            <AddNewTaskModal open={openModal} handleClose={() => setOpenModal(false)}
+                             handleSave={(data) => handleSubmit(data)}
             />
+        </Box>
+
         </>
     );
 }
 
-export default HomePage;
+export default TasksPage;
