@@ -7,18 +7,15 @@ the description, theme color and a priority level, while
 the event data model contains an uuid, name of the event, the description, theme color and a date.
 The state of tasks and events is being managed by Redux and Redux Toolkit libraries.
 
-## Purpose
-
-The purpose of this project is to learn and experiment with React Redux, Redux Toolkit and ChakraUI library for styled components.
-
-## Screenshots
-
 <p float="middle">
     <img src='screenshots/webhome.PNG' width="100%" alt='home page on web'/>
 </p>
 
+More screenshots are available in the [screenshots](https://github.com/nikkovacevic/redux-task-management/tree/main/screenshots) folder.
 
+## Purpose
 
+The purpose of this project is to learn and experiment with React Redux, Redux Toolkit and ChakraUI library for styled components.
 
 ## Getting started
 
